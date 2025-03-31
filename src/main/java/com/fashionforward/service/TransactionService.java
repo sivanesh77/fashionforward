@@ -2,6 +2,9 @@ package com.fashionforward.service;
 
 import com.fashionforward.entity.Transaction;
 import com.fashionforward.repository.TransactionRepository;
+
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,6 +31,8 @@ public class TransactionService {
         return transactionRepository.save(transaction);
     }
 
+    
+
     public Transaction updateTransaction(Long id, Transaction updatedTransaction) {
         Transaction existingTransaction = getTransactionById(id);
         existingTransaction.setAmount(updatedTransaction.getAmount());
@@ -38,4 +43,5 @@ public class TransactionService {
     public void deleteTransaction(Long id) {
         transactionRepository.deleteById(id);
     }
+   
 }

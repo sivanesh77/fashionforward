@@ -73,4 +73,5 @@ public class Transaction {
     public String toString() {
         return "Transaction{id=" + id + ", rental=" + rental + ", amount=" + amount + ", status=" + paymentStatus + "}";
     }
+    
 }
